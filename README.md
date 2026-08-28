@@ -8,7 +8,7 @@ This project migrates a legacy application from an on-premises/outdated environm
 
 ## Architecture
 
-![Architecture Diagram](./diagrams/architecture-diagram.png)
+![Architecture Diagram](./images/architectural-diagram.png)
 
 **Traffic flow:** client requests hit the EC2 instance over HTTP/HTTPS (restricted by security group to ports 22, 80, 443) → Apache serves the request → PHP executes WordPress application logic → MySQL handles persistent data. Administrative access is separated via SSH key-pair authentication.
 
@@ -105,21 +105,20 @@ Navigate to the instance's public IP to complete WordPress setup.
 
 | | |
 |---|---|
-| **EC2 Instance Console** — instance type, security group rules, public IP | ![EC2 Instance Console](./screenshots/01-ec2-instance-console.png) |
-| **Apache Status** — service active and running | ![Apache Status](./screenshots/02a-apache-status.png) |
-| **MySQL Status** — service active and running | ![MySQL Status](./screenshots/02b-mysql-status.png) |
-| **MySQL User Grants** — `wordpress_user` scoped correctly to `wordpress_db` | ![MySQL User Grants](./screenshots/03-mysql-user-grants.png) |
-| **wp-config.php** — database connection configured (credentials redacted) | ![wp-config.php](./screenshots/04-wp-config-redacted.png) |
-| **Live WordPress Site** — deployment confirmed end to end | ![Live WordPress Site](./screenshots/05-live-wordpress-site.png) |
+| **EC2 Instance Console** — instance type, security group rules, public IP | ![EC2 Instance Console](./images/01-ec2-instance-console.png) |
+| **Apache Status** — service active and running | ![Apache Status](./images/02a-apache-status.png) |
+| **MySQL Status** — service active and running | ![MySQL Status](./images/02b-mysql-status.png) |
+| **MySQL User Grants** — `wordpress_user` scoped correctly to `wordpress_db` | ![MySQL User Grants](./images/03-mysql-user-grants.png) |
+| **wp-config.php** — database connection configured (credentials redacted) | ![wp-config.php](./images/04-wp-config-redacted.png) |
+| **Live WordPress Site** — deployment confirmed end to end | ![Live WordPress Site](./images/05-live-wordpress-site.png) |
 
 ## Repository Structure
 
 ```
 .
 ├── README.md
-├── diagrams/
-│   └── architecture-diagram.png
-└── screenshots/
+└── images/
+    ├── architectural-diagram.png
     ├── 01-ec2-instance-console.png
     ├── 02a-apache-status.png
     ├── 02b-mysql-status.png
